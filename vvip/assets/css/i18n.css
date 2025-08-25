@@ -1,0 +1,96 @@
+/* DXB Nights — i18n.css (replaced) */
+
+/* خط عربي (استيراد مباشر). إذا تفضّل بدون @import، احذف السطر التالي وأضف <link> داخل <head>. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap");
+
+/* الوضع الافتراضي (LTR) يبقى كما في main.css */
+
+/* ===== RTL rules ===== */
+html[dir="rtl"] body{
+  font-family: "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", "Tahoma", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .rtl{
+  direction: rtl;
+  text-align: right;
+}
+
+/* النصوص العامة */
+html[dir="rtl"] h1, 
+html[dir="rtl"] h2, 
+html[dir="rtl"] h3, 
+html[dir="rtl"] h4, 
+html[dir="rtl"] h5, 
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .section-subtitle{
+  text-align: right;
+}
+
+/* القوائم والتنقل */
+html[dir="rtl"] .nav .nav-container{
+  direction: rtl;
+}
+html[dir="rtl"] .nav-menu{
+  direction: rtl;
+}
+html[dir="rtl"] .nav-menu .nav-item{
+  margin-right: 0;
+  margin-left: 24px;
+}
+html[dir="rtl"] .nav-actions{
+  direction: rtl;
+}
+
+/* الأزرار والأيقونات: اعكس الهوامش الشائعة */
+html[dir="rtl"] .btn svg{
+  margin-right: 0;
+  margin-left: .5rem;
+}
+
+/* بطاقات/شبكات */
+html[dir="rtl"] .feature-card,
+html[dir="rtl"] .value-card,
+html[dir="rtl"] .team-member,
+html[dir="rtl"] .post-card,
+html[dir="rtl"] .gallery-item{
+  direction: rtl;
+  text-align: right;
+}
+
+/* Breadcrumbs / ميتا */
+html[dir="rtl"] .post-meta{
+  direction: rtl;
+}
+
+/* الحقول والعناصر */
+html[dir="rtl"] .form-group label{
+  text-align: right;
+}
+html[dir="rtl"] .form-group .help-text{
+  text-align: right;
+}
+
+/* Footer */
+html[dir="rtl"] .footer .footer-links{
+  direction: rtl;
+  text-align: right;
+}
+
+/* ===== انعكاس المسافات الشائعة ===== */
+:root{
+  --gap-m: 1rem;
+}
+
+html[dir="rtl"] .ml-auto{ margin-left: 0 !important; margin-right: auto !important; }
+html[dir="rtl"] .mr-auto{ margin-right: 0 !important; margin-left: auto !important; }
+
+/* عكس الحواف الافتراضية للبطاقات إذا كانت موجودة */
+html[dir="rtl"] .card{
+  direction: rtl;
+  text-align: right;
+}
+
+/* ===== Reduced motion unchanged ===== */

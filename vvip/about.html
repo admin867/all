@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About — DXB Nights | Premium Nightlife Experience</title>
+  <meta name="description" content="Discover the story behind DXB Nights — a premium nightlife experience blending luxury, innovation, and world-class entertainment in Dubai." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://dxbnights.life/about.html" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://dxbnights.life/about.html" />
+  <link rel="alternate" hreflang="ar" href="https://dxbnights.life/about.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://dxbnights.life/about.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="About — DXB Nights | Premium Nightlife Experience" />
+  <meta property="og:description" content="Discover the story behind DXB Nights — a premium nightlife experience blending luxury and innovation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dxbnights.life/about.html" />
+  <meta property="og:image" content="https://dxbnights.life/assets/img/about-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="DXB Nights" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_AE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — DXB Nights | Premium Nightlife Experience" />
+  <meta name="twitter:description" content="Discover the story behind DXB Nights — a premium nightlife experience blending luxury and innovation." />
+  <meta name="twitter:image" content="https://dxbnights.life/assets/img/about-og.jpg" />
+
+  <!-- Icons / Fonts -->
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preload fonts -->
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/shared-components.css" />
+
+  <!-- AOS (for data-aos attributes on this page) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About DXB Nights",
+    "url": "https://dxbnights.life/about.html",
+    "description": "Learn about DXB Nights, a premium nightlife experience in Dubai blending luxury and innovation.",
+    "mainEntity": {
+      "@type": "NightClub",
+      "name": "DXB Nights",
+      "description": "Premium nightlife experience with cutting-edge design and VIP service"
+    }
+  }
+  </script>
+
+  <style>
+    .page-header{padding:8rem 0 2rem}
+    .story-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
+    @media (min-width:980px){.story-grid{grid-template-columns:1.1fr .9fr;align-items:center}}
+    .story-image img{width:100%;height:auto;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
+    .values-grid,.team-grid,.stats-grid{display:grid;gap:1rem}
+    .values-grid{grid-template-columns:1fr}
+    .team-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    @media (min-width:780px){.values-grid{grid-template-columns:repeat(3,1fr)}.team-grid{grid-template-columns:repeat(3,1fr)}.stats-grid{grid-template-columns:repeat(4,1fr)}}
+    .value-card,.team-member,.stat-item{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);border-radius:16px;padding:1rem}
+    .member-image img{width:100%;height:auto;border-radius:12px;display:block}
+    .stat-number{font-size:2rem;font-weight:800;letter-spacing:.5px}
+    .stat-label{opacity:.85}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="DXB Nights Home">
+        <span class="logo-text">DXB<span style="opacity:.85">NIGHTS</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="reservation.html" class="nav-link">Reservations</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item">
+          <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+            <span class="lang-text">EN</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <h1 class="page-title" data-aos="fade-up">About DXB Nights</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Where luxury meets innovation in the heart of Dubai
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content" data-aos="fade-right">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-text">
+              <p>
+                DXB Nights was born from a vision to redefine the nightlife experience —
+                an immersive destination that blends architecture, sound design, and digital art
+                to create unforgettable nights.
+              </p>
+              <p>
+                Our space features cutting-edge audio systems, kinetic light installations,
+                and crafted VIP areas that elevate every moment from arrival to last track.
+              </p>
+              <p>
+                From intimate lounges to an expansive main floor, every corner is designed for
+                atmosphere, energy, and premium service.
+              </p>
+            </div>
+          </div>
+          <div class="story-image" data-aos="fade-left">
+            <img src="assets/img/about/venue-hero.jpg" alt="DXB Nights interior with immersive lighting" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section" id="values">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Our Values</h2>
+        <div class="values-grid">
+          <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-icon" aria-hidden="true"><div class="icon-luxury"></div></div>
+            <h3 class="value-title">Luxury</h3>
+            <p class="value-description">Every detail is curated for a sophisticated, premium experience.</p>
+          </div>
+          <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-icon" aria-hidden="true"><div class="icon-innovation"></div></div>
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-description">We push boundaries with technology, storytelling, and design.</p>
+          </div>
+          <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-icon" aria-hidden="true"><div class="icon-excellence"></div></div>
+            <h3 class="value-title">Excellence</h3>
+            <p class="value-description">Service, safety, and hospitality at the highest standard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section" id="team">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Leadership Team</h2>
+        <div class="team-grid">
+          <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-image">
+              <img src="assets/img/team/ceo.jpg" alt="Portrait of the CEO" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Alexandra Chen</h3>
+              <p class="member-role">Chief Executive Officer</p>
+              <p class="member-bio">15+ years in luxury hospitality and experience design.</p>
+            </div>
+          </div>
+
+          <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-image">
+              <img src="assets/img/team/creative.jpg" alt="Portrait of the Creative Director" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Marcus Rodriguez</h3>
+              <p class="member-role">Creative Director</p>
+              <p class="member-bio">Leads spatial storytelling, lighting, and music programming.</p>
+            </div>
+          </div>
+
+          <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-image">
+              <img src="assets/img/team/ops.jpg" alt="Portrait of the Operations Manager" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Sarah Thompson</h3>
+              <p class="member-role">Operations Manager</p>
+              <p class="member-bio">Delivers seamless service and guest experience nightly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-number" data-count="15000">0</div>
+            <div class="stat-label">Square Feet</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number" data-count="500">0</div>
+            <div class="stat-label">VIP Members</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number" data-count="100">0</div>
+            <div class="stat-label">World-Class DJs</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-number" data-count="4.9">0</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+          <h2 class="cta-title">Experience DXB Nights</h2>
+          <p class="cta-subtitle">Join us for an unforgettable night of luxury and sound</p>
+          <a href="reservation.html" class="btn btn-primary btn-large">Make a Reservation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-logo">DXB NIGHTS</h3>
+          <p class="footer-tagline">The Future of Nightlife</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-title">Navigate</h4>
+            <ul class="footer-menu">
+              <li><a href="about.html" aria-current="page">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Events</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Connect</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/dxbnights" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+              <a href="https://tiktok.com/@dxbnights" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+              <a href="https://facebook.com/dxbnights" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> DXB Nights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/shared-components.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu   = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('is-open');
+      });
+    }
+
+    // Language toggle (EN/AR + RTL)
+    const html = document.documentElement;
+    const langBtn = document.getElementById('lang-toggle');
+    const langText = document.querySelector('.lang-text');
+    langBtn?.addEventListener('click', () => {
+      const next = (html.lang || 'en') === 'en' ? 'ar' : 'en';
+      html.lang = next;
+      html.dir  = next === 'ar' ? 'rtl' : 'ltr';
+      if (langText) langText.textContent = next.toUpperCase();
+      if (window.applyTranslations) window.applyTranslations(next);
+    });
+
+    // Animated counters on visibility
+    const counters = document.querySelectorAll('.stat-number');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const el = entry.target;
+          const target = parseFloat(el.dataset.count);
+          const isFloat = !Number.isInteger(target);
+          const start = 0;
+          const duration = 1200;
+          const startTime = performance.now();
+          function tick(now){
+            const p = Math.min((now - startTime)/duration,1);
+            const val = start + (target - start) * p;
+            el.textContent = isFloat ? val.toFixed(1) : Math.round(val);
+            if(p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          io.unobserve(el);
+        }
+      });
+    },{threshold:.35});
+    counters.forEach(c=>io.observe(c));
+  </script>
+</body>
+</html>

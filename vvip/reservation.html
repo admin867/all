@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reservations — DXB Nights | Book Your VIP Experience</title>
+  <meta name="description" content="Reserve your table at DXB Nights. Book VIP experiences, bottle service, and exclusive areas for a premium nightlife experience in Dubai." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://dxbnights.life/reservation.html" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://dxbnights.life/reservation.html" />
+  <link rel="alternate" hreflang="ar" href="https://dxbnights.life/reservation.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://dxbnights.life/reservation.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Reservations — DXB Nights | Book Your VIP Experience" />
+  <meta property="og:description" content="Reserve your table at DXB Nights and unlock VIP bottle service and exclusive areas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dxbnights.life/reservation.html" />
+  <meta property="og:image" content="https://dxbnights.life/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="DXB Nights" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_AE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reservations — DXB Nights | Book Your VIP Experience" />
+  <meta name="twitter:description" content="Reserve your table at DXB Nights and unlock VIP bottle service and exclusive areas." />
+  <meta name="twitter:image" content="https://dxbnights.life/assets/img/og-image.jpg" />
+
+  <!-- Icons / Fonts -->
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/shared-components.css" />
+
+  <!-- AOS (الصفحة تستخدم data-aos) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ReservationService",
+    "name":"DXB Nights Reservations",
+    "description":"Reserve tables and VIP experiences at DXB Nights",
+    "url":"https://dxbnights.life/reservation.html",
+    "provider":{"@type":"NightClub","name":"DXB Nights"}
+  }
+  </script>
+
+  <style>
+    .page-header{padding:8rem 0 2rem}
+    .options-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+    @media (min-width:900px){.options-grid{grid-template-columns:repeat(3,1fr)}}
+    .option-card{position:relative;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);border-radius:16px;padding:1rem;display:grid;gap:.6rem}
+    .option-card.featured{outline:1px solid rgba(255,255,255,.35)}
+    .option-badge{position:absolute;top:.6rem;right:.6rem;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.25rem .6rem;font-size:.8rem}
+    .option-price{opacity:.9;font-weight:600}
+    .reservation-form .form-section{border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem;margin-bottom:1rem;background:rgba(255,255,255,.03)}
+    .form-row{display:grid;gap:.75rem}
+    @media (min-width:780px){.form-row{grid-template-columns:1fr 1fr}}
+    .form-actions{display:grid;gap:.5rem;justify-items:start}
+    .contact-actions{display:flex;gap:.6rem;flex-wrap:wrap}
+    .status{margin-top:.5rem;font-size:.95rem;opacity:.9}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="DXB Nights Home">
+        <span class="logo-text">DXB<span style="opacity:.85">NIGHTS</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="blog.html">Events</a></li>
+        <li><a class="nav-link" href="reservation.html" aria-current="page">Reservations</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li>
+          <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+            <span class="lang-text">EN</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <h1 class="page-title" data-aos="fade-up">Make a Reservation</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Secure your spot for an unforgettable night at DXB Nights
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Options -->
+    <section class="reservation-options" id="reservation-options">
+      <div class="container">
+        <div class="options-grid">
+          <div class="option-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="option-icon" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+                <path d="M3 9L12 2L21 9V20A2 2 0 0 1 19 22H5A2 2 0 0 1 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="option-title">General Admission</h3>
+            <p class="option-description">Entry to the main floor with access to the bar and dance area</p>
+            <div class="option-price">From $25</div>
+            <button class="btn btn-secondary option-btn" data-option="general">Select</button>
+          </div>
+
+          <div class="option-card featured" data-aos="fade-up" data-aos-delay="200">
+            <div class="option-badge">Most Popular</div>
+            <div class="option-icon" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 17L12 22L21 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="option-title">VIP Table</h3>
+            <p class="option-description">Reserved seating with bottle service and dedicated server</p>
+            <div class="option-price">From $500</div>
+            <button class="btn btn-primary option-btn" data-option="vip">Select</button>
+          </div>
+
+          <div class="option-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="option-icon" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="option-title">Private Event</h3>
+            <p class="option-description">Exclusive venue rental for private parties and corporate events</p>
+            <div class="option-price">Contact for Pricing</div>
+            <button class="btn btn-secondary option-btn" data-option="private">Select</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="reservation-form-section" id="reservation-form">
+      <div class="container">
+        <div class="form-container">
+          <div class="form-header" data-aos="fade-up">
+            <h2 class="section-title">Reservation Details</h2>
+            <p class="section-subtitle">Fill out the form below to secure your reservation</p>
+          </div>
+
+          <form class="reservation-form" id="reservation-form-element" data-aos="fade-up" data-aos-delay="200" novalidate>
+            <input type="hidden" id="selected-option" name="reservationType" value="general" />
+
+            <!-- Personal -->
+            <div class="form-section" aria-labelledby="personal-info-title">
+              <h3 id="personal-info-title" class="form-section-title">Personal Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name" class="form-label">First Name *</label>
+                  <input type="text" id="first-name" name="firstName" class="form-input" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="last-name" class="form-label">Last Name *</label>
+                  <input type="text" id="last-name" name="lastName" class="form-input" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required inputmode="email" autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" required inputmode="tel" autocomplete="tel" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="form-section" aria-labelledby="reservation-details-title">
+              <h3 id="reservation-details-title" class="form-section-title">Reservation Details</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date" class="form-label">Preferred Date *</label>
+                  <input type="date" id="date" name="date" class="form-input" required />
+                </div>
+                <div class="form-group">
+                  <label for="time" class="form-label">Preferred Time *</label>
+                  <select id="time" name="time" class="form-select" required>
+                    <option value="">Select time</option>
+                    <option value="22:00">10:00 PM</option>
+                    <option value="22:30">10:30 PM</option>
+                    <option value="23:00">11:00 PM</option>
+                    <option value="23:30">11:30 PM</option>
+                    <option value="00:00">12:00 AM</option>
+                    <option value="00:30">12:30 AM</option>
+                    <option value="01:00">1:00 AM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="party-size" class="form-label">Party Size *</label>
+                  <select id="party-size" name="partySize" class="form-select" required>
+                    <option value="">Select party size</option>
+                    <option value="1">1 person</option>
+                    <option value="2">2 people</option>
+                    <option value="3">3 people</option>
+                    <option value="4">4 people</option>
+                    <option value="5">5 people</option>
+                    <option value="6">6 people</option>
+                    <option value="7">7 people</option>
+                    <option value="8">8 people</option>
+                    <option value="9">9 people</option>
+                    <option value="10+">10+ people</option>
+                  </select>
+                </div>
+                <div class="form-group" id="occasion-group">
+                  <label for="occasion" class="form-label">Special Occasion</label>
+                  <select id="occasion" name="occasion" class="form-select">
+                    <option value="">Select occasion (optional)</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="bachelor">Bachelor/Bachelorette</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="celebration">General Celebration</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- VIP -->
+            <div class="form-section" id="vip-options" style="display:none" aria-labelledby="vip-title">
+              <h3 id="vip-title" class="form-section-title">VIP Preferences</h3>
+              <div class="form-group">
+                <label for="bottle-preference" class="form-label">Bottle Preference</label>
+                <select id="bottle-preference" name="bottlePreference" class="form-select">
+                  <option value="">Select bottle package (optional)</option>
+                  <option value="premium-vodka">Premium Vodka Package - $500</option>
+                  <option value="premium-champagne">Premium Champagne Package - $600</option>
+                  <option value="luxury-whiskey">Luxury Whiskey Package - $800</option>
+                  <option value="ultimate-package">Ultimate Package - $1200</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="seating-preference" class="form-label">Seating Preference</label>
+                <select id="seating-preference" name="seatingPreference" class="form-select">
+                  <option value="">Select seating area (optional)</option>
+                  <option value="main-floor">Main Floor VIP</option>
+                  <option value="mezzanine">Mezzanine Level</option>
+                  <option value="private-booth">Private Booth</option>
+                  <option value="terrace">VIP Terrace</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Additional -->
+            <div class="form-section" aria-labelledby="additional-info-title">
+              <h3 id="additional-info-title" class="form-section-title">Additional Information</h3>
+              <div class="form-group">
+                <label for="special-requests" class="form-label">Special Requests</label>
+                <textarea id="special-requests" name="specialRequests" class="form-textarea" rows="4" placeholder="Any special requests or dietary restrictions..."></textarea>
+              </div>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-section">
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="terms" class="form-checkbox" required />
+                  <span class="checkbox-custom"></span>
+                  I agree to the <a href="#" class="link">Terms and Conditions</a> and <a href="#" class="link">Cancellation Policy</a>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" class="form-checkbox" />
+                  <span class="checkbox-custom"></span>
+                  Subscribe to our newsletter for exclusive offers and event updates
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-large">Submit Reservation</button>
+              <p class="form-note">You will receive a confirmation email within 24 hours</p>
+              <div id="reservation-status" class="status" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact" id="quick-contact">
+      <div class="container">
+        <div class="contact-content" data-aos="fade-up">
+          <h2 class="contact-title">Need Immediate Assistance?</h2>
+          <p class="contact-subtitle">Our VIP concierge team is available 24/7</p>
+          <div class="contact-actions">
+            <a href="tel:+1-555-LUXE-VIP" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.92V19.92C22 20.52 21.52 21 20.92 21C9.4 21 0 11.6 0 0.08C0 -0.52 0.48 -1 1.08 -1H4.08C4.68 -1 5.16 -0.52 5.16 0.08C5.16 2.08 5.44 4.04 6 5.92C6.12 6.32 6 6.76 5.72 7.04L4.12 8.64C5.32 11.24 7.76 13.68 10.36 14.88L11.96 13.28C12.24 13 12.68 12.88 13.08 13C14.96 13.56 16.92 13.84 18.92 13.84C19.52 13.84 20 14.32 20 14.92V17.92C20 18.52 19.52 19 18.92 19Z" fill="currentColor"/>
+              </svg>
+              Call Now
+            </a>
+            <a href="https://wa.me/15558438847" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-logo">DXB NIGHTS</h3>
+          <p class="footer-tagline">The Future of Nightlife</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-title">Navigate</h4>
+            <ul class="footer-menu">
+              <li><a href="about.html">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Events</a></li>
+              <li><a href="reservation.html" aria-current="page">Reservations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Connect</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/dxbnights" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+              <a href="https://tiktok.com/@dxbnights" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+              <a href="https://facebook.com/dxbnights" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> DXB Nights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/shared-components.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu   = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('is-open');
+      });
+    }
+
+    // Language toggle (EN/AR + RTL)
+    const html = document.documentElement;
+    const langBtn = document.getElementById('lang-toggle');
+    const langText = document.querySelector('.lang-text');
+    langBtn?.addEventListener('click', () => {
+      const next = (html.lang || 'en') === 'en' ? 'ar' : 'en';
+      html.lang = next;
+      html.dir  = next === 'ar' ? 'rtl' : 'ltr';
+      if (langText) langText.textContent = next.toUpperCase();
+      if (window.applyTranslations) window.applyTranslations(next);
+    });
+
+    // Reservation options -> set hidden field + toggle VIP prefs
+    const optionButtons = document.querySelectorAll('.option-btn');
+    const selectedInput = document.getElementById('selected-option');
+    const vipSection    = document.getElementById('vip-options');
+
+    optionButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const type = btn.dataset.option || 'general';
+        selectedInput.value = type;
+        optionButtons.forEach(b=>b.classList.remove('is-selected'));
+        btn.classList.add('is-selected');
+        vipSection.style.display = (type === 'vip') ? '' : 'none';
+        document.getElementById('reservation-form').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Minimum date (Asia/Dubai)
+    (function setMinDate(){
+      try {
+        // دبي: UTC+4 (بدون اعتبار التوقيت الصيفي)
+        const now = new Date();
+        const dubaiOffset = 4 * 60; // minutes
+        const utc = now.getTime() + now.getTimezoneOffset()*60000;
+        const dubaiNow = new Date(utc + dubaiOffset*60000);
+        const yyyy = dubaiNow.getFullYear();
+        const mm = String(dubaiNow.getMonth()+1).padStart(2,'0');
+        const dd = String(dubaiNow.getDate()).padStart(2,'0');
+        const today = `${yyyy}-${mm}-${dd}`;
+        const dateInput = document.getElementById('date');
+        if (dateInput) dateInput.min = today;
+      } catch(e){}
+    })();
+
+    // Basic client-side validation + mock submit
+    const form   = document.getElementById('reservation-form-element');
+    const status = document.getElementById('reservation-status');
+
+    form?.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      status.textContent = '';
+      if (!form.checkValidity()) {
+        status.textContent = 'Please complete all required fields correctly.';
+        form.reportValidity?.();
+        return;
+      }
+      status.textContent = 'Submitting your reservation...';
+      // TODO: اربط مع باك-إند/خدمة (Formspree, Supabase, Firebase, …)
+      await new Promise(r=>setTimeout(r,900));
+      status.textContent = 'Thank you! Your reservation request has been received. We will confirm by email within 24 hours.';
+      form.reset();
+      document.getElementById('selected-option').value = 'general';
+      vipSection.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

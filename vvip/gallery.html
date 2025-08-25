@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gallery — DXB Nights | Premium Nightlife Experience</title>
+  <meta name="description" content="Explore the luxury and energy of DXB Nights—interior design, VIP areas, world-class DJs, and unforgettable events." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://dxbnights.life/gallery.html" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://dxbnights.life/gallery.html" />
+  <link rel="alternate" hreflang="ar" href="https://dxbnights.life/gallery.html?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://dxbnights.life/gallery.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Gallery — DXB Nights | Premium Nightlife Experience" />
+  <meta property="og:description" content="Explore the luxury and energy of DXB Nights—interior, VIP, DJs, and events." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dxbnights.life/gallery.html" />
+  <meta property="og:image" content="https://dxbnights.life/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="DXB Nights" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_AE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery — DXB Nights | Premium Nightlife Experience" />
+  <meta name="twitter:description" content="Explore the luxury and energy of DXB Nights—interior, VIP, DJs, and events." />
+  <meta name="twitter:image" content="https://dxbnights.life/assets/img/og-image.jpg" />
+
+  <!-- Icons / Fonts -->
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/playfair-display-variable.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/shared-components.css" />
+
+  <!-- AOS (لأن الصفحة تستخدم data-aos) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ImageGallery",
+    "name":"DXB Nights Gallery",
+    "url":"https://dxbnights.life/gallery.html",
+    "description":"Photo gallery showcasing DXB Nights’ luxury interior, VIP areas, DJs and events."
+  }
+  </script>
+
+  <style>
+    .page-header{padding:8rem 0 2rem}
+    .filter-container{display:flex;flex-wrap:wrap;gap:.5rem}
+    .filter-btn{padding:.5rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+    .filter-btn.active{border-color:rgba(255,255,255,.4)}
+    .gallery-grid{columns:1;column-gap:1rem}
+    @media (min-width:680px){.gallery-grid{columns:2}}
+    @media (min-width:1024px){.gallery-grid{columns:3}}
+    .gallery-item{break-inside:avoid;margin:0 0 1rem;position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+    .gallery-item img{width:100%;height:auto;display:block;transform:translateZ(0)}
+    .gallery-overlay{position:absolute;inset:auto 0 0 0;padding:1rem;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
+    .gallery-title{font-weight:600}
+    .gallery-actions{display:flex;justify-content:center;margin-top:1rem}
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);z-index:9999}
+    .lightbox.is-open{display:grid}
+    .lightbox-content{position:relative;max-width:min(92vw,1200px);max-height:86vh;display:grid;grid-template-rows:auto 1fr auto;gap:.75rem}
+    .lightbox-image{max-width:100%;max-height:70vh;object-fit:contain;border-radius:12px}
+    .lightbox-info{color:#fff;opacity:.9}
+    .lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;top:.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:999px;padding:.35rem .6rem}
+    .lightbox-close{right:.5rem}
+    .lightbox-prev{left:.5rem;top:50%;transform:translateY(-50%)}
+    .lightbox-next{right:.5rem;top:50%;transform:translateY(-50%)}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="DXB Nights Home">
+        <span class="logo-text">DXB<span style="opacity:.85">NIGHTS</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a class="nav-link" href="blog.html">Events</a></li>
+        <li><a class="nav-link" href="reservation.html">Reservations</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li>
+          <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+            <span class="lang-text">EN</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <h1 class="page-title" data-aos="fade-up">Gallery</h1>
+          <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Experience the luxury and energy of DXB Nights</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="gallery-filters" id="gallery-filters">
+      <div class="container">
+        <div class="filter-container" data-aos="fade-up" role="tablist" aria-label="Gallery filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Photos</button>
+          <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interior</button>
+          <button class="filter-btn" data-filter="events" role="tab" aria-selected="false">Events</button>
+          <button class="filter-btn" data-filter="vip" role="tab" aria-selected="false">VIP Areas</button>
+          <button class="filter-btn" data-filter="djs" role="tab" aria-selected="false">DJs &amp; Artists</button>
+          <button class="filter-btn" data-filter="crowd" role="tab" aria-selected="false">Atmosphere</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- NOTE: بدّل الصور لاحقًا بصورك داخل assets/img/gallery/... -->
+          <!-- Interior -->
+          <figure class="gallery-item" data-category="interior" data-aos="fade-up">
+            <img src="assets/img/placeholders/600x400.jpg" alt="Main floor interior with immersive lighting" loading="lazy" width="600" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Main Floor</h3>
+              <p class="gallery-description">Cinematic lighting and volumetric atmosphere.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="interior" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/placeholders/400x600.jpg" alt="VIP lounge seating" loading="lazy" width="400" height="600" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">VIP Lounge</h3>
+              <p class="gallery-description">Exclusive seating for premium guests.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="interior" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/placeholders/500x400.jpg" alt="Premium bar with signature cocktails" loading="lazy" width="500" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Premium Bar</h3>
+              <p class="gallery-description">Signature cocktails and premium spirits.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Events -->
+          <figure class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/img/placeholders/600x400.jpg" alt="Saturday night event with full crowd" loading="lazy" width="600" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Saturday Night Energy</h3>
+              <p class="gallery-description">The floor comes alive every weekend.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/img/placeholders/400x600.jpg" alt="New Year celebration" loading="lazy" width="400" height="600" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">New Year Celebration</h3>
+              <p class="gallery-description">Unforgettable moments from NYE.</p>
+            </figcaption>
+          </figure>
+
+          <!-- VIP -->
+          <figure class="gallery-item" data-category="vip" data-aos="fade-up" data-aos-delay="500">
+            <img src="assets/img/placeholders/500x500.jpg" alt="Private VIP booth" loading="lazy" width="500" height="500" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Private Booth</h3>
+              <p class="gallery-description">Intimate spaces for exclusive experiences.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="vip" data-aos="fade-up" data-aos-delay="600">
+            <img src="assets/img/placeholders/600x400.jpg" alt="VIP terrace with city view" loading="lazy" width="600" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">VIP Terrace</h3>
+              <p class="gallery-description">Outdoor luxury with stunning views.</p>
+            </figcaption>
+          </figure>
+
+          <!-- DJs -->
+          <figure class="gallery-item" data-category="djs" data-aos="fade-up" data-aos-delay="700">
+            <img src="assets/img/placeholders/400x600.jpg" alt="International DJ performance" loading="lazy" width="400" height="600" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">World-Class DJs</h3>
+              <p class="gallery-description">International artists on our stage.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="djs" data-aos="fade-up" data-aos-delay="800">
+            <img src="assets/img/placeholders/600x400.jpg" alt="Live performance with lasers" loading="lazy" width="600" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Live Performances</h3>
+              <p class="gallery-description">Exclusive shows and special guests.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Crowd -->
+          <figure class="gallery-item" data-category="crowd" data-aos="fade-up" data-aos-delay="900">
+            <img src="assets/img/placeholders/400x500.jpg" alt="Dancing crowd under beams" loading="lazy" width="400" height="500" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Electric Atmosphere</h3>
+              <p class="gallery-description">Energy that defines DXB Nights.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="crowd" data-aos="fade-up" data-aos-delay="1000">
+            <img src="assets/img/placeholders/600x400.jpg" alt="Celebration with confetti" loading="lazy" width="600" height="400" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Celebration Mode</h3>
+              <p class="gallery-description">Every night is a celebration.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="interior" data-aos="fade-up" data-aos-delay="1100">
+            <img src="assets/img/placeholders/400x600.jpg" alt="Grand entrance hall" loading="lazy" width="400" height="600" />
+            <figcaption class="gallery-overlay">
+              <h3 class="gallery-title">Grand Entrance</h3>
+              <p class="gallery-description">Your journey into luxury begins here.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Load More -->
+        <div class="gallery-actions" data-aos="fade-up">
+          <button class="btn btn-secondary" id="load-more-btn">Load More Photos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+          <h2 class="cta-title">Ready to Create Your Own Memories?</h2>
+          <p class="cta-subtitle">Join us for an unforgettable night at DXB Nights</p>
+          <a href="reservation.html" class="btn btn-primary btn-large">Make a Reservation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox-overlay" data-close></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close" data-close>×</button>
+      <button class="lightbox-prev" aria-label="Previous" data-prev>‹</button>
+      <img class="lightbox-image" src="" alt="" />
+      <button class="lightbox-next" aria-label="Next" data-next>›</button>
+      <div class="lightbox-info">
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-logo">DXB NIGHTS</h3>
+          <p class="footer-tagline">The Future of Nightlife</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-title">Navigate</h4>
+            <ul class="footer-menu">
+              <li><a href="about.html">About</a></li>
+              <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+              <li><a href="blog.html">Events</a></li>
+              <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Connect</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/dxbnights" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+              <a href="https://tiktok.com/@dxbnights" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+              <a href="https://facebook.com/dxbnights" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> DXB Nights. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/shared-components.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once:true, duration:800, easing:'ease-out' });</script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu   = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('is-open');
+      });
+    }
+
+    // Language toggle
+    const html = document.documentElement;
+    const langBtn = document.getElementById('lang-toggle');
+    const langText = document.querySelector('.lang-text');
+    langBtn?.addEventListener('click', () => {
+      const next = (html.lang || 'en') === 'en' ? 'ar' : 'en';
+      html.lang = next;
+      html.dir  = next === 'ar' ? 'rtl' : 'ltr';
+      if (langText) langText.textContent = next.toUpperCase();
+      if (window.applyTranslations) window.applyTranslations(next);
+    });
+
+    // Filters
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items   = document.querySelectorAll('.gallery-item');
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        buttons.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.getAttribute('data-filter');
+        items.forEach(it=>{
+          const ok = f === 'all' || it.getAttribute('data-category') === f;
+          it.style.display = ok ? '' : 'none';
+        });
+      });
+    });
+
+    // Lightbox
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = lightbox.querySelector('.lightbox-image');
+    const lbTitle    = lightbox.querySelector('.lightbox-title');
+    const lbDesc     = lightbox.querySelector('.lightbox-description');
+    const closeBtns  = lightbox.querySelectorAll('[data-close]');
+    const prevBtn    = lightbox.querySelector('[data-prev]');
+    const nextBtn    = lightbox.querySelector('[data-next]');
+    let currentIndex = -1;
+    const visibleItems = () => Array.from(document.querySelectorAll('.gallery-item')).filter(el => el.style.display !== 'none');
+
+    function openLightbox(i){
+      const list = visibleItems();
+      const el = list[i];
+      if (!el) return;
+      currentIndex = i;
+      const img = el.querySelector('img');
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt;
+      lbTitle.textContent = el.querySelector('.gallery-title')?.textContent || '';
+      lbDesc.textContent  = el.querySelector('.gallery-description')?.textContent || '';
+      lightbox.classList.add('is-open');
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('is-open');
+      currentIndex = -1;
+      lbImg.src = '';
+      lbImg.alt = '';
+    }
+    function step(dir){
+      const list = visibleItems();
+      if (!list.length) return;
+      currentIndex = (currentIndex + dir + list.length) % list.length;
+      openLightbox(currentIndex);
+    }
+
+    document.getElementById('gallery-grid').addEventListener('click', e=>{
+      const fig = e.target.closest('.gallery-item');
+      if (!fig) return;
+      const list = visibleItems();
+      const idx = list.indexOf(fig);
+      openLightbox(idx);
+    });
+
+    closeBtns.forEach(b=>b.addEventListener('click', closeLightbox));
+    lightbox.addEventListener('click', e=>{ if (e.target.hasAttribute('data-close')) closeLightbox(); });
+    prevBtn.addEventListener('click', ()=>step(-1));
+    nextBtn.addEventListener('click', ()=>step(1));
+    window.addEventListener('keydown', e=>{
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+
+    // Load More (placeholder logic — بدّل لاحقًا لجلب صور حقيقية)
+    document.getElementById('load-more-btn').addEventListener('click', ()=>{
+      const grid = document.getElementById('gallery-grid');
+      for(let i=0;i<6;i++){
+        const f = document.createElement('figure');
+        f.className = 'gallery-item';
+        f.setAttribute('data-category','events');
+        f.innerHTML = `
+          <img src="assets/img/placeholders/600x400.jpg" alt="Additional gallery image" loading="lazy" width="600" height="400" />
+          <figcaption class="gallery-overlay">
+            <h3 class="gallery-title">More Moments</h3>
+            <p class="gallery-description">Captured at DXB Nights.</p>
+          </figcaption>`;
+        grid.appendChild(f);
+      }
+    });
+  </script>
+</body>
+</html>
