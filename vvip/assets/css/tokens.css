@@ -1,0 +1,54 @@
+/* Design Tokens (semantic aliases mapped to base tokens in main.css) */
+
+:root {
+  /* Color semantics */
+  --c-bg: var(--color-black);
+  --c-surface: var(--color-gray-900);
+  --c-surface-2: var(--color-gray-800);
+  --c-border: rgba(255, 255, 255, 0.1);
+  --c-text: var(--color-white);
+  --c-text-muted: var(--color-gray-400);
+  --c-primary: var(--color-primary);
+  --c-primary-600: var(--color-secondary);
+
+  /* Typography semantics */
+  --font-body: var(--font-primary);
+  --font-display: var(--font-display);
+
+  /* Radius semantics */
+  --radius: var(--radius-lg);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  /* Elevation semantics */
+  --shadow-1: var(--shadow-sm);
+  --shadow-2: var(--shadow-md);
+  --shadow-3: var(--shadow-lg);
+  --shadow-4: var(--shadow-xl);
+
+  /* Spacing semantics */
+  --gap-xs: var(--space-xs);
+  --gap-sm: var(--space-sm);
+  --gap-md: var(--space-md);
+  --gap-lg: var(--space-lg);
+  --gap-xl: var(--space-xl);
+  --gap-2xl: var(--space-2xl);
+  --gap-3xl: var(--space-3xl);
+
+  /* Motion semantics */
+  --motion-fast: var(--transition-fast);
+  --motion-normal: var(--transition-normal);
+  --motion-slow: var(--transition-slow);
+}
+
+/* Light theme (optional) */
+[data-theme="light"] {
+  --c-bg: #ffffff;
+  --c-surface: #f7f7f9;
+  --c-surface-2: #ededf2;
+  --c-border: rgba(0, 0, 0, 0.1);
+  --c-text: #0a0a0a;
+  --c-text-muted: #5a5a5a;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DXB Nights — Styleguide</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/shared-components.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body{padding:2rem}
+    .sg-section{margin-bottom:3rem}
+    .swatch{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+    .swatch .item{border:1px solid var(--c-border);border-radius:12px;overflow:hidden}
+    .swatch .chip{height:64px}
+    .swatch .meta{padding:.75rem}
+    .grid{display:grid;gap:1rem}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width: 640px){.grid.two{grid-template-columns:1fr}}
+  </style>
+  <script>
+    // Theme toggle for demo
+    function toggleTheme(){
+      const root=document.documentElement;
+      const isLight=root.getAttribute('data-theme')==='light';
+      root.setAttribute('data-theme', isLight?'dark':'light');
+    }
+  </script>
+  </head>
+<body>
+  <h1 class="hero-title" style="font-size:2.25rem;line-height:1">Styleguide</h1>
+  <p class="hero-subtitle" style="opacity:1;animation:none">Design tokens and components preview</p>
+  <button class="btn btn-secondary" onclick="toggleTheme()">Toggle Theme</button>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Colors</h2>
+    <div class="swatch">
+      <div class="item"><div class="chip" style="background:var(--c-bg)"></div><div class="meta">--c-bg</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-surface)"></div><div class="meta">--c-surface</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-surface-2)"></div><div class="meta">--c-surface-2</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-border)"></div><div class="meta">--c-border</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-text)"></div><div class="meta">--c-text</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-text-muted)"></div><div class="meta">--c-text-muted</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-primary)"></div><div class="meta">--c-primary</div></div>
+      <div class="item"><div class="chip" style="background:var(--c-primary-600)"></div><div class="meta">--c-primary-600</div></div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Typography</h2>
+    <div class="grid two">
+      <div>
+        <div class="hero-title" style="margin:0 0 1rem">Display Heading</div>
+        <p class="feature-description">Body text using Inter Variable. Color uses --c-text-muted.</p>
+      </div>
+      <div>
+        <h3 class="feature-title" style="margin:0 0 .5rem">Feature Title</h3>
+        <p class="feature-description">Supporting text size and rhythm follow base tokens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Buttons</h2>
+    <div class="grid">
+      <div class="grid two">
+        <a class="btn btn-primary" href="#">Primary Button</a>
+        <a class="btn btn-secondary" href="#">Secondary Button</a>
+      </div>
+      <div>
+        <a class="btn btn-primary btn-large" href="#">Large Primary</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Cards</h2>
+    <div class="features-grid" style="margin-top:0">
+      <article class="feature-card">
+        <div class="feature-icon"><div class="icon-3d"></div></div>
+        <h3 class="feature-title">Card Title</h3>
+        <p class="feature-description">Glassmorphism card using surface, border, and blur tokens.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon"><div class="icon-3d"></div></div>
+        <h3 class="feature-title">Card Hover</h3>
+        <p class="feature-description">Hover elevates and tints border to primary.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Toast & Modal</h2>
+    <div class="grid two">
+      <div>
+        <button class="btn btn-secondary" onclick="document.getElementById('sg-toast').style.display='block'">Show Toast</button>
+        <div id="sg-toast" class="toast" role="status" aria-live="polite">Saved successfully</div>
+      </div>
+      <div>
+        <button class="btn btn-primary" onclick="document.getElementById('sg-modal').classList.add('is-open')">Open Modal</button>
+        <div class="modal" id="sg-modal" role="dialog" aria-modal="true">
+          <div class="modal-overlay" onclick="document.getElementById('sg-modal').classList.remove('is-open')"></div>
+          <div class="modal-dialog">
+            <div class="modal-header"><div class="modal-title">Modal Title</div></div>
+            <div class="modal-body">This is the modal body using surface tokens.</div>
+            <div class="modal-footer"><button class="modal-close" onclick="document.getElementById('sg-modal').classList.remove('is-open')">✕</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="cta-title" style="font-size:1.5rem">Badges</h2>
+    <div class="grid two">
+      <span class="badge">Default</span>
+      <span class="badge">Premium</span>
+    </div>
+  </section>
+
+  <script>
+    // Auto-hide toast after 2s
+    const sgToast=document.getElementById('sg-toast');
+    if(sgToast){ setTimeout(()=>{ sgToast.style.display='none'; }, 2200); }
+  </script>
+</body>
+</html>
+
